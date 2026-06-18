@@ -172,29 +172,6 @@ func Hapus() {
 	}
 }
 
-// func HapusMilestone() {
-// 	var idHapus int
-
-// 	if JumlahData == 0 {
-// 		fmt.Println("Belum ada data yang ditambahkan")
-// 		fmt.Println("Silahkan kembali ke halaman utama untuk menambahkan data terlebih dahulu ya!!")
-// 		return
-// 	}
-
-// 	fmt.Print("Masukan ID Milestone yang ingin dihapus: ")
-// 	fmt.Scan(&idHapus)
-
-// 	for i := 0; i < JumlahData; i++ {
-
-// 		if TotalData[i].id == idHapus {
-// 			TotalData[i] = TotalData[JumlahData-1]
-// 			JumlahData--
-// 			fmt.Println("Milestone berhasil dihapus.")
-// 			return
-// 		}
-// 	}
-// }
-
 func HapusMilestone() {
 	var idHapus int
 
