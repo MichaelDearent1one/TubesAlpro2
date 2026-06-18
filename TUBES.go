@@ -474,7 +474,6 @@ func TampilkanMilestone() {
 	fmt.Println("Pilih menu untuk melanjutkan")
 	fmt.Println("1. Tampilkan Semua Milestone Saja")
 	fmt.Println("2. Tampilkan Semua Milestone dan Jadwal Tugas")
-	fmt.Println("3. Tampilkan Milestone Tugas")
 	fmt.Println("Pilihan anda adalah : ")
 	fmt.Scan(&pilihan)
 	switch pilihan {
@@ -482,8 +481,6 @@ func TampilkanMilestone() {
 		TampilkanMilestoneSaja()
 	case 2:
 		TampilkanSemua()
-	case 3:
-		TampilkanMilestoneTugas()
 	}
 }
 
@@ -518,30 +515,6 @@ func TampilkanSemua() {
 		fmt.Printf("[%d] %s | Tgl: %s | Penting: %d | Stres: %d | Mood: %d | %s | Deskripsi: %s | Perasaan: %s | Jadwal Tugas: %s\n",
 			TotalData[i].id, TotalData[i].NamaTugas, TotalData[i].TanggalSelesai, TotalData[i].Kepentingan, TotalData[i].Mood.SkorStres, TotalData[i].Mood.SkorMoodMilestone, status, TotalData[i].Deskripsi, TotalData[i].Mood.CatatanRasa, TotalData[i].tugas.jadwaltugas)
 	}
-}
-
-func TampilkanMilestoneTugas() {
-	if JumlahData == 0 {
-		fmt.Println("Belum ada data milestone yang ditambahkan.")
-		return
-	}
-	var inputID int
-	fmt.Print("Masukan ID Milestone yang ingin dilihat: ")
-	fmt.Scan(&inputID)
-	indeks := cariIdMilestone(inputID)
-	if indeks == -1 {
-		fmt.Println("Milestone dengan ID tersebut tidak ditemukan.")
-		return
-	}
-	m := TotalData[indeks]
-	status := "Belum Selesai"
-	if m.Selesai {
-		status = "Selesai"
-	}
-
-	fmt.Printf("[%d] %s | Tgl: %s | Penting: %d | Stres: %d | Mood: %d | %s | Deskripsi: %s | Perasaan: %s | Jadwal Tugas: %s\n",
-		m.id, m.NamaTugas, m.TanggalSelesai, m.Kepentingan, m.Mood.SkorStres, m.Mood.SkorMoodTugas, status,
-		m.Deskripsi, m.Mood.CatatanRasa, m.tugas.jadwaltugas)
 }
 
 func Urut() {
