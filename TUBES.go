@@ -103,9 +103,9 @@ func TambahMilestone() {
 	fmt.Scan(&m.NamaTugas)
 	fmt.Println("Masukan Deskripsi : ")
 	fmt.Scan(&m.Deskripsi)
-	fmt.Println("Masukan Tanggal Kegiatan Dimulai (DD/MM/YYYY): ")
+	fmt.Println("Masukan Tanggal Kegiatan Dimulai (YYYY/MM/DD): ")
 	fmt.Scan(&m.TanggalMulai)
-	fmt.Println("Masukan Tanggal Deadline (DD/MM/YYYY) : ")
+	fmt.Println("Masukan Tanggal Deadline (YYYY/MM/DD) : ")
 	fmt.Scan(&m.TanggalDeadline)
 	fmt.Println("Minggu ke- : ")
 	fmt.Scan(&m.Mingguke)
@@ -294,13 +294,13 @@ func UbahMilestone() {
 	} else if pilihan == "8" {
 		fmt.Print("Masukan Tingkat Mood Anda (1-10): ")
 		fmt.Scan(&TotalData[indeks].Mood.SkorMoodMilestone)
-	} else if pilihan == "9" {
-		fmt.Print("Masukan Catatan Perasaan: ")
-		fmt.Scan(&TotalData[indeks].Mood.CatatanRasa)
-	} else if pilihan == "0" {
+	} else  if pilihan == "0" {
 		return
 	} else {
-		fmt.Println("Pilihan tidak valid.")
+if pilihan == "9" {
+		fmt.Print("Masukan Catatan Perasaan: ")
+		fmt.Scan(&TotalData[indeks].Mood.CatatanRasa)
+	} else		fmt.Println("Pilihan tidak valid.")
 	}
 }
 
@@ -422,7 +422,7 @@ func CariMilestone() bool {
 		cariNamaMilestone(nama)
 		ketemu = true
 	} else if pilihan == 2 {
-		fmt.Print("Masukan Tanggal Selesai yang ingin dicari (DD/MM/YYYY): ")
+		fmt.Print("Masukan Tanggal Selesai yang ingin dicari (YYYY/MM/DD): ")
 		fmt.Scan(&tanggal)
 		cariTanggalMilestone(tanggal)
 		ketemu = true
