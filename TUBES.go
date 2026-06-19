@@ -297,7 +297,7 @@ func UbahMilestone() {
 	} else  if pilihan == "9" {
 		fmt.Print("Masukan Catatan Perasaan: ")
 		fmt.Scan(&TotalData[indeks].Mood.CatatanRasa)
-	} if pilihan == "0" {
+	} else if pilihan == "0" {
 		return
 	} else {
 	fmt.Println("Pilihan tidak valid.")
