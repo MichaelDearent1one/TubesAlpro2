@@ -300,7 +300,8 @@ func UbahMilestone() {
 if pilihan == "9" {
 		fmt.Print("Masukan Catatan Perasaan: ")
 		fmt.Scan(&TotalData[indeks].Mood.CatatanRasa)
-	} else		fmt.Println("Pilihan tidak valid.")
+	} else {
+	fmt.Println("Pilihan tidak valid.")
 	}
 }
 
